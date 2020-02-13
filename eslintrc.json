@@ -1,11 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "prettier",
-    "prettier/react",
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  "extends": ["prettier", "prettier/react", "eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -32,10 +27,7 @@
     "no-plusplus": "off",
     "no-shadow": "warn",
     "no-underscore-dangle": "warn",
-    "no-unused-expressions": [
-      "error",
-      { "allowShortCircuit": true, "allowTernary": true }
-    ],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
     "no-nested-ternary": "off",
     "no-unused-vars": "warn",
     "prefer-destructuring": "off",

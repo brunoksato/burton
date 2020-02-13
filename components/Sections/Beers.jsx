@@ -15,10 +15,7 @@ const Beers = () => {
         <ContainerGradient beerName="Blonde ale" beerImg={"/images/beer.png"} />
         <ContainerGradient beerName="Black ipa" beerImg={"/images/beer.png"} />
         <ContainerGradient beerName="Witbier" beerImg={"/images/beer.png"} />
-        <ContainerGradient
-          beerName="Session ipa"
-          beerImg={"/images/beer.png"}
-        />
+        <ContainerGradient beerName="Session ipa" beerImg={"/images/beer.png"} />
         <ContainerGradient beerName="pilsen" beerImg={"/images/beer.png"} />
       </Carousel>
     </CustomContainer>

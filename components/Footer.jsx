@@ -48,9 +48,7 @@ const Foooter = () => {
         </ListLinks>
       </WrapRowContent>
       <WrapRowContent>
-        <Copyright>
-          © 2019 Quidd, Inc. All rights reserved | Made with love in NYC.
-        </Copyright>
+        <Copyright>© 2019 Quidd, Inc. All rights reserved | Made with love in NYC.</Copyright>
         <ContainerIcons>
           <a
             href="https://twitter.com/quidd"

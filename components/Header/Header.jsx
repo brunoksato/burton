@@ -14,10 +14,9 @@ const Header = props => {
           <br /> Brewery
         </PrincipalText>
         <SecondaryText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nunc
-          faucibus a pellentesque sit amet porttitor. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit amet porttitor.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </SecondaryText>
         <OutlineBtn onClick={props.handleButton}>About Company</OutlineBtn>
       </ContainerContent>
