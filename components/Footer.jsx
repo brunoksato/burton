@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-import AppleStore from "../public/logo/appleStore.svg";
-import GooglePlay from "../public/logo/googlePlay.svg";
-
 import Insta from "../public/logo/instagram.svg";
 import Face from "../public/logo/facebook.svg";
 import Twitter from "../public/logo/twitter.svg";
@@ -16,24 +13,6 @@ const Foooter = () => {
         <WrapContetnWithButtons>
           <h3>Building your first digital collection has never been easier.</h3>
           <h2>Join today.</h2>
-          <CotainerButtons>
-            <LinkButton
-              href="https://apps.apple.com/us/app/quidd-digital-collectibles/id1063166978"
-              target="_blank"
-              alt="AppleStore"
-              loading="lazy"
-            >
-              <img src={AppleStore} loading="lazy" alt="AppleStore" />
-            </LinkButton>
-            <LinkButton
-              href="https://play.google.com/store/apps/details?id=com.quidd.quidd"
-              target="_blank"
-              alt="GooglePlay"
-              loading="lazy"
-            >
-              <img src={GooglePlay} loading="lazy" alt="GooglePlay" />
-            </LinkButton>
-          </CotainerButtons>
         </WrapContetnWithButtons>
         <ListLinks>
           <li>
@@ -69,7 +48,9 @@ const Foooter = () => {
         </ListLinks>
       </WrapRowContent>
       <WrapRowContent>
-        <Copyright>© 2019 Quidd, Inc. All rights reserved | Made with love in NYC.</Copyright>
+        <Copyright>
+          © 2019 Quidd, Inc. All rights reserved | Made with love in NYC.
+        </Copyright>
         <ContainerIcons>
           <a
             href="https://twitter.com/quidd"
@@ -182,40 +163,6 @@ const ListLinks = styled.ul`
       &:hover {
         color: #422662;
       }
-    }
-  }
-`;
-
-const CotainerButtons = styled.div`
-  display: flex;
-  a:first-child {
-    margin-right: 1em;
-  }
-  @media (max-width: 1000px) {
-    margin-bottom: 1em;
-    a:first-child {
-      margin-right: 0em;
-    }
-  }
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-const LinkButton = styled.a`
-  width: 100%;
-  max-width: 162px;
-  margin-top: 1em;
-  padding: 0 !important;
-  z-index: 3;
-  cursor: pointer;
-  img {
-    max-width: 162px;
-  }
-  @media (max-width: 1000px) {
-    img {
-      margin-bottom: 0;
     }
   }
 `;

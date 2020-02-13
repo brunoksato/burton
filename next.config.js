@@ -1,6 +1,7 @@
 const withCss = require("@zeit/next-css");
+const withFonts = require('next-fonts');
 
-module.exports = withCss({
+module.exports = withFonts(withCss({
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
@@ -13,4 +14,4 @@ module.exports = withCss({
     });
     return config;
   }
-});
+}));

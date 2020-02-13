@@ -1,40 +1,29 @@
-@font-face{ 
-  font-family: "Larsseit"; 
-  src: url("https://s3.amazonaws.com/prod.assets.onquidd.com/website/Larsseit.otf"); 
-}
+import { createGlobalStyle } from "styled-components";
 
-@font-face{ 
-  font-family: "LarsseitLight"; 
-  src: url("https://s3.amazonaws.com/prod.assets.onquidd.com/website/Larsseit-Light.otf"); 
+export const GlobalStyle = createGlobalStyle`
+  @font-face{ 
+  font-family: edosz; 
+  src: url("/fonts/edosz.ttf"); 
 }
-
-@font-face{ 
-  font-family: "LarsseitThin"; 
-  src: url("https://s3.amazonaws.com/prod.assets.onquidd.com/website/Larsseit-Thin.otf"); 
-}
-
-@font-face{ 
-  font-family: "LarsseitBold"; 
-  src: url("https://s3.amazonaws.com/prod.assets.onquidd.com/website/Larsseit-Bold.otf"); 
-}
-
 
 html,body{
   overflow-x:hidden !important;
-
+  scroll-behavior: smooth;
 }
 
 html {
-  font-family: 'Larsseit, sans-serif, Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:edosz,'sans-serif, Helvetica Neue', Helvetica, Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family:'Larsseit, sans-serif ,Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-family: edosz,'sans-serif ,Helvetica Neue', Helvetica, Arial, sans-serif ;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+
 }
 body::-webkit-scrollbar {
   width: .5em;
@@ -240,7 +229,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Larsseit', sans-serif !important;
+  font-family:  sans-serif !important;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal; 
@@ -258,7 +247,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;
@@ -268,9 +257,9 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   color: inherit;
-  font-family: 'Larsseit',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'edosz',-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -660,3 +649,5 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+`

@@ -1,4 +1,3 @@
 <h1 align="center">
-  Quidd Website
+  Burton Website
 </h1>
-

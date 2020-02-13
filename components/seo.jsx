@@ -22,7 +22,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `apple-mobile-web-app-title`,
-          content: `Quidd`
+          content: `Burton`
         },
         {
           name: `apple-mobile-web-app-capable`,
@@ -50,11 +50,11 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           property: `og:site_name`,
-          content: `quidd.co`
+          content: `burton.com`
         },
         {
           property: `og:url`,
-          content: "quidd.co"
+          content: "burton.com"
         },
         {
           name: `twitter:card`,
@@ -62,7 +62,7 @@ function SEO({ description, lang, meta, keywords, title, image, url }) {
         },
         {
           name: `twitter:creator`,
-          content: "quidd"
+          content: "burton"
         },
         {
           name: `twitter:title`,
