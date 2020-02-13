@@ -15,7 +15,6 @@ const HomePage = () => {
       <Beers />
       <SectionOne />
       <SectionTwo />
-      <div>olaq11</div>
     </Layout>
   );
 };
