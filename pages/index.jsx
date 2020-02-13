@@ -15,9 +15,7 @@ const HomePage = () => {
       <Beers />
       <SectionOne />
       <SectionTwo />
-      <div>
-        ola
-      </div>
+      <div>olaq11</div>
     </Layout>
   );
 };
