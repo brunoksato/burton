@@ -10,7 +10,7 @@ import ButtonsSlide from "../Beers/ButtonsSlide";
 const Beers = () => {
   return (
     <CustomContainer id="beer-section">
-      <Carousel auto={true} widgets={[IndicatorDots, ButtonsSlide]}>
+      <Carousel widgets={[IndicatorDots, ButtonsSlide]}>
         <ContainerGradient beerName="Ipa" beerImg={"/images/beer.png"} />
         <ContainerGradient beerName="Blonde ale" beerImg={"/images/beer.png"} />
         <ContainerGradient beerName="Black ipa" beerImg={"/images/beer.png"} />

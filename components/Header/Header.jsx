@@ -32,10 +32,6 @@ const Wrap = styled.div`
   background-color: ${props => props.theme.color.black};
   height: 100vh;
   overflow: hidden;
-  @media (max-width: 480px) {
-    height: 100%;
-    padding-bottom: 9em;
-  }
 `;
 
 //START center content
@@ -49,7 +45,7 @@ const ContainerContent = styled(Container)`
     transition: 0.5s;
     padding: 0 2em;
   }
-  @media (max-width: 480px) {
+  @media (max-width: ${props => props.theme.queries.sm}) {
     margin-top: 50px;
   }
 `;

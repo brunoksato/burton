@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Container } from "../UI";
+import BoxInfoBeer from "../Beers/BoxInfoBeer";
+import BoxAboutBeer from "../Beers/BoxAboutBeer";
+
 const ContainerGradient = props => {
   return (
     <Gradient>
@@ -13,7 +17,12 @@ const ContainerGradient = props => {
           loading="lazy"
           alt={`burton-cerveja-artesanal-${props.beerName}`}
         />
+        <TextBottomBeer>
+          Made with the finest <br /> <b>two-row barley</b>
+        </TextBottomBeer>
       </CenterBeer>
+      <BoxInfoBeer />
+      <BoxAboutBeer />
     </Gradient>
   );
 };
@@ -29,18 +38,18 @@ const Gradient = styled.div`
 const CenterText = styled.div`
   color: ${props => props.theme.color.white};
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 100;
   height: 100vh;
   h1 {
     transition: 0.5s;
-    margin-top: -1.2em;
     font-size: 6rem;
     letter-spacing: 15px;
   }
   @media (min-width: ${props => props.theme.queries.lg}) {
     h1 {
+      margin-top: 0.2em;
       font-size: 9rem;
     }
   }
@@ -57,8 +66,9 @@ const CenterText = styled.div`
       font-size: 3rem;
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: ${props => props.theme.queries.sm}) {
     h1 {
+      margin-top: 1em;
       font-size: 1.5rem;
     }
   }
@@ -70,24 +80,39 @@ const CenterBeer = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   z-index: 10;
   align-items: center;
   justify-content: center;
   opacity: 0.9;
   transition: 0.5s;
   @media (max-width: ${props => props.theme.queries.md}) {
-    top: 100px;
-    align-items: flex-start;
+    height: 100%;
   }
-  @media (max-width: 480px) {
-    top: 50px;
+`;
+
+const TextBottomBeer = styled.h2`
+  color: ${props => props.theme.color.white};
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  transition: 0.5s;
+  @media (max-width: ${props => props.theme.queries.lg}) {
+    font-size: 0;
   }
 `;
 
 const ImageBeer = styled.img`
   transition: 0.5s;
-  max-height: 80%;
+  max-height: 60%;
+  margin-top: 9em;
   @media (max-width: ${props => props.theme.queries.xl}) {
-    max-height: 60%;
+    margin-top: 9em;
+  }
+  @media (max-width: ${props => props.theme.queries.lg}) {
+    margin-top: -7em;
   }
 `;

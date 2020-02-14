@@ -644,7 +644,7 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: ${props => props.theme.queries.sm}) {
   html {
     font-size: 100%;
   }

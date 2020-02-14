@@ -13,7 +13,7 @@ const Navigation = props => {
       <NavLinks>
         <a>Início</a>
         <a>Cervejas</a>
-        <a>Onde estamos</a>
+        {/* <a>Onde estamos</a> */}
         <a>contato</a>
         <img src={Menu} />
       </NavLinks>
@@ -64,7 +64,7 @@ const NavLinks = styled.div`
   }
   @media (min-width: 1600px) {
     width: 100%;
-    max-width: 900px;
+    /* max-width: 900px; */
   }
   @media (max-width: ${props => props.theme.queries.md}) {
     a {
