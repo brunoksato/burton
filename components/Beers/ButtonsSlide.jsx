@@ -38,6 +38,9 @@ const Wrapper = styled.div`
   @media (max-width: ${props => props.theme.queries.md}) {
     right: 0em;
   }
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    bottom: 38%;
+  }
 `;
 
 const ChevronRight = styled.img`

@@ -13,6 +13,7 @@ const Navigation = props => {
       <NavLinks>
         <a>Início</a>
         <a>Cervejas</a>
+        <a>Eventos</a>
         {/* <a>Onde estamos</a> */}
         <a>contato</a>
         <img src={Menu} />

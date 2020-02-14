@@ -6,21 +6,32 @@ const BoxInfoBeer = props => {
   return (
     <WrapperInfoBeer display="flex">
       <ContainerInfoBeer>
-        <Container display="flex" justifyContent="space-between" marginBottom={15}>
-          <Container display="flex" flexDirection="column" alignItems="center">
+        <NewContainer display="flex" flexDirection="column">
+          <Container
+            display="flex"
+            flexDirection="column"
+            alignItems="flex-start"
+            marginBottom={20}
+          >
             <TextLabelBeer>Álcool</TextLabelBeer>
             <TextInfoBeer>4.5%</TextInfoBeer>
           </Container>
-          <Container display="flex" flexDirection="column" alignItems="center">
+          <Container
+            display="flex"
+            flexDirection="column"
+            alignItems="flex-start"
+            marginBottom={20}
+          >
             <TextLabelBeer>IBU</TextLabelBeer>
             <TextInfoBeer>média</TextInfoBeer>
           </Container>
-        </Container>
-        <Container display="flex" flexDirection="column" alignItems="center">
+        </NewContainer>
+        <Container display="flex" flexDirection="column" alignItems="flex-start">
           <TextLabelBeer>ingredientes</TextLabelBeer>
           <TextInfoBeer>Barley Malt, Rice, wheat malt, hops and yeast</TextInfoBeer>
         </Container>
       </ContainerInfoBeer>
+      <Btn>Button</Btn>
     </WrapperInfoBeer>
   );
 };
@@ -28,45 +39,55 @@ const BoxInfoBeer = props => {
 export default BoxInfoBeer;
 
 const WrapperInfoBeer = styled.div`
-  display: flex;
-  justify-content: center;
   width: 100%;
-  position: absolute;
-  bottom: 18%;
-  right: 480px;
-  @media (max-width: 1310px) {
-    right: 350px;
+  margin: 1em 0 3em 0;
+  border: 1px solid ${props => props.theme.color.lightGray};
+  @media (min-width: ${props => props.theme.queries.lg}) {
+    max-width: 350px;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
-    justify-content: center;
-    bottom: 2%;
-    right: 0;
-  }
-  @media (max-width: ${props => props.theme.queries.lg}) {
-    justify-content: center;
-    bottom: 0;
-    right: 0;
+    margin: 1em 0 1em 0;
   }
 `;
 
 const ContainerInfoBeer = styled.div`
-  z-index: 10;
-  height: 200px;
-  width: 300px;
+  padding: 2em;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    padding: 1em;
+  }
 `;
 
 const TextLabelBeer = styled.div`
-  color: ${props => props.theme.color.white};
+  color: ${props => props.theme.color.gray};
   font-size: 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
 
 const TextInfoBeer = styled.div`
-  color: ${props => props.theme.color.gray};
+  color: ${props => props.theme.color.white};
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   max-width: 270px;
+`;
+
+const Btn = styled.div`
+  border-top: 1px solid ${props => props.theme.color.lightGray};
+  padding: 1em 2em;
+  text-align: center;
+  color: ${props => props.theme.color.white};
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+const NewContainer = styled(Container)`
+  @media (max-width: ${props => props.theme.queries.md}) {
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
 `;
