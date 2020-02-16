@@ -1,190 +1,180 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { Container } from "./UI";
 
 import Insta from "../public/logo/instagram.svg";
 import Face from "../public/logo/facebook.svg";
 import Twitter from "../public/logo/twitter.svg";
 
-const Foooter = () => {
+const Footer = () => {
   return (
-    <Container>
-      <WrapRowContent className="content1">
-        <WrapContetnWithButtons>
-          <h3>Building your first digital collection has never been easier.</h3>
-          <h2>Join today.</h2>
-        </WrapContetnWithButtons>
-        <ListLinks>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <a
-              href="https://quidd.zendesk.com/hc/en-us/sections/204104757-FAQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              alt="FAQ"
-            >
-              FAQ
-            </a>
-          </li>
-          <li>
-            <Link href="/password/forgot">
-              <a>Forgot Password</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/terms">
-              <a>Terms</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/privacy">
-              <a>Privacy</a>
-            </Link>
-          </li>
-        </ListLinks>
-      </WrapRowContent>
-      <WrapRowContent>
-        <Copyright>© 2019 Quidd, Inc. All rights reserved | Made with love in NYC.</Copyright>
-        <ContainerIcons>
-          <a
-            href="https://twitter.com/quidd"
-            target="_blank"
-            rel="noopener noreferrer"
-            alt="Twitter"
-          >
-            <img src={Twitter} loading="lazy" alt="Twitter" />
-          </a>
-          <a
-            href="https://facebook.com/MyQuidd"
-            target="_blank"
-            rel="noopener noreferrer"
-            alt="Facebook"
-          >
-            <img src={Face} loading="lazy" alt="Facebook" />
-          </a>
-          <a
-            href="https://instagram.com/myquidd"
-            target="_blank"
-            rel="noopener noreferrer"
-            alt="Instagram"
-          >
-            <img src={Insta} loading="lazy" alt="Instagram" />
-          </a>
-        </ContainerIcons>
-      </WrapRowContent>
-    </Container>
+    <NewContainer display="flex" flexDirection="column">
+      <Wrap>
+        <WrapBorderBottom>
+          <Title>Let's be friends!</Title>
+        </WrapBorderBottom>
+        <Grid>
+          <ContainerSocialMedia display="flex" flexDirection="column" width="100%">
+            <WrapBorderBottom className="social-media">
+              <Text className="social-media">Connect with us on</Text>
+            </WrapBorderBottom>
+            <Container display="flex" className="wrap-icons">
+              <a href="https://instagram.com" rel="noopener" target="_blank">
+                <IconSocialMedia src={Insta} />
+              </a>
+              <a href="https://facebook.com" rel="noopener" target="_blank">
+                <IconSocialMedia src={Face} />
+              </a>
+              <a href="https://twitter.com" rel="noopener" target="_blank">
+                <IconSocialMedia src={Twitter} />
+              </a>
+            </Container>
+          </ContainerSocialMedia>
+          <Container display="flex" flexDirection="column">
+            <WrapBorderBottom className="">
+              <Text>Contact us</Text>
+            </WrapBorderBottom>
+            <Container>
+              <WrapInputs display="flex">
+                <Input style={{ marginRight: ".5em" }} placeholder="Nome" />
+                <Input placeholder="Email" />
+              </WrapInputs>
+              <CheckboxLabel style={{ margin: "1em 0" }}>Subject</CheckboxLabel>
+              <Container marginY={10} display="flex" alignItems="center">
+                <input type="checkbox" />
+                <CheckboxLabel>Sales</CheckboxLabel>
+              </Container>
+              <Container marginY={10} display="flex" alignItems="center">
+                <input type="checkbox" />
+                <CheckboxLabel>Logistics</CheckboxLabel>
+              </Container>
+              <Container marginY={10} display="flex" alignItems="center">
+                <input type="checkbox" />
+                <CheckboxLabel>Quality</CheckboxLabel>
+              </Container>
+              <Container marginTop={10} marginBottom={20} display="flex" alignItems="center">
+                <input type="checkbox" />
+                <CheckboxLabel>Marketing and Events</CheckboxLabel>
+              </Container>
+              <Textarea placeholder="message" />
+            </Container>
+          </Container>
+        </Grid>
+      </Wrap>
+    </NewContainer>
   );
 };
 
-export default Foooter;
+export default Footer;
 
-const Container = styled.footer`
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  padding: 5em 1.5em;
-  background-color: #6b10d6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .content1 {
-    margin-bottom: 4em;
-  }
-
-  @media (max-width: 1000px) {
-    .content1 {
-      margin-bottom: 1em;
+const NewContainer = styled(Container)`
+  background-color: ${props => props.theme.color.black};
+  @media (max-width: ${props => props.theme.queries.md}) {
+    .label {
+      display: none;
     }
-    padding: 4em 1.5em 1em 1.5em;
+    .wrap-icons {
+      justify-content: center;
+    }
   }
 `;
 
-const WrapRowContent = styled.div`
+const Wrap = styled.div`
+  max-width: 1300px;
   width: 100%;
+  margin: 0 auto;
+  padding: 2em;
   display: flex;
-  max-width: 1280px;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  @media (max-width: 1000px) {
+`;
+
+const Title = styled.h1`
+  font-size: 4rem;
+  color: ${props => props.theme.color.white};
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+`;
+
+const WrapBorderBottom = styled(Container)`
+  width: 100%;
+  border-bottom: 1px solid ${props => props.theme.color.white};
+  @media (max-width: ${props => props.theme.queries.md}) {
+    border-bottom: none;
+  }
+`;
+
+const Grid = styled.div`
+  margin-top: 4em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Text = styled.div`
+  font-size: 1rem;
+  color: ${props => props.theme.color.white};
+  padding-bottom: 2em;
+`;
+
+const ContainerSocialMedia = styled(Container)`
+  @media (max-width: ${props => props.theme.queries.md}) {
+    .social-media {
+      text-align: center;
+      padding-bottom: 0 !important;
+      margin-left: -0.3em;
+    }
+  }
+`;
+
+const IconSocialMedia = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+  cursor: pointer;
+  margin-top: 4em;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    margin-top: 2em;
+  }
+`;
+//right
+
+const Input = styled.input`
+  width: 100%;
+  height: 50px;
+  border-radius: 0.3em;
+  text-indent: 0.5em;
+  border: none;
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    margin-bottom: 2em;
+  }
+`;
+
+const WrapInputs = styled(Container)`
+  padding-top: 3em;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    padding-top: 0em;
+  }
+  @media (max-width: ${props => props.theme.queries.sm}) {
     flex-direction: column;
   }
 `;
 
-const WrapContetnWithButtons = styled.div`
-  h3 {
-    font-size: 14px;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 0.01em;
-    margin-bottom: 17px;
-  }
-  h2 {
-    font-weight: 700;
-    font-size: 52px;
-    color: #fff;
-    letter-spacing: 0.01em;
-  }
-  @media (max-width: 1000px) {
-    text-align: center;
-    h2 {
-      font-size: 40px;
-    }
-  }
+const CheckboxLabel = styled(Text)`
+  padding-bottom: 0;
+  margin-left: 1em;
 `;
 
-const ListLinks = styled.ul`
-  @media (max-width: 1000px) {
-    justify-content: center;
-    grid-template-columns: initial;
-    grid-gap: 0;
-  }
-  width: 105px;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25px 25px 25px 25px;
-  li {
-    padding: 0.3em 0;
-    margin-bottom: 0;
-    a {
-      color: #fff;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-      color: #fff;
-      letter-spacing: 0.01em;
-      &:hover {
-        color: #422662;
-      }
-    }
-  }
-`;
-
-const Copyright = styled.div`
-  font-size: 14px;
-  float: left;
-  color: #fff;
-  letter-spacing: 0.01em;
-  text-align: center;
-`;
-
-const ContainerIcons = styled.div`
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-  a {
-    cursor: pointer;
-  }
-  img {
-    width: 20px;
-    height: 20px;
-  }
-  @media (max-width: 1000px) {
-    margin-top: 1.6em;
-  }
+const Textarea = styled.textarea`
+  border-radius: 0.3em;
+  border: none;
+  text-indent: 10px;
+  width: 100%;
+  height: 145px;
 `;
