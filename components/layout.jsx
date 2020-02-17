@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
+import Anchor from "./Anchor";
 
 const Layout = ({ children }) => (
   <>
     <Container>
       <main>{children}</main>
     </Container>
-    <Footer />
+    <Anchor anchorId="footer">
+      <Footer id="footer" />
+    </Anchor>
   </>
 );
 export default Layout;

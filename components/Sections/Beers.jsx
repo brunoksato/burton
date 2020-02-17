@@ -6,6 +6,7 @@ import { Container } from "../UI";
 import ContainerGradient from "../Beers/ContainerGradient";
 import IndicatorDots from "../Beers/IndicatorDots";
 import ButtonsSlide from "../Beers/ButtonsSlide";
+import Anchor from "../Anchor";
 
 const Beers = () => {
   const [current, setCurrent] = useState(0);
@@ -24,14 +25,16 @@ const Beers = () => {
   });
 
   return (
-    <CustomContainer id="beer-section">
-      <Carousel
-        currentFrameIndex={current}
-        frames={frames}
-        duration={600}
-        widgets={[IndicatorDots, ButtonsSlide]}
-      />
-    </CustomContainer>
+    <Anchor anchorId="beers">
+      <CustomContainer id="beer-section">
+        <Carousel
+          currentFrameIndex={current}
+          frames={frames}
+          duration={600}
+          widgets={[IndicatorDots, ButtonsSlide]}
+        />
+      </CustomContainer>
+    </Anchor>
   );
 };
 

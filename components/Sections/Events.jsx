@@ -2,17 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../UI";
 import Card from "../Events/Card";
+import Anchor from "../Anchor";
 
 const Events = props => {
   return (
-    <CustomContainer>
-      <Title>Eventos</Title>
-      <Grid>
-        <Card />
-        <Card />
-        <Card />
-      </Grid>
-    </CustomContainer>
+    <Anchor anchorId="events">
+      <CustomContainer>
+        <Title>Eventos</Title>
+        <Grid>
+          <Card />
+          <Card />
+          <Card />
+        </Grid>
+      </CustomContainer>
+    </Anchor>
   );
 };
 

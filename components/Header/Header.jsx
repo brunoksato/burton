@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 const Header = props => {
   return (
     <Wrap>
-      <Navigation fullpageApi={props.fullpageApi} />
+      <Navigation />
       <ContainerContent display="flex" flexDirection="column">
         <PrincipalText>
           Craft

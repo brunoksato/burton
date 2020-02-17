@@ -11,8 +11,8 @@ const HomePage = () => {
     <Layout>
       <SEO title="Burton" />
       <Header />
-      <Beers />
-      <Events />
+      <Beers id="beers" />
+      <Events id="events" />
     </Layout>
   );
 };
