@@ -5,7 +5,6 @@ import { Container } from "./UI";
 
 import Insta from "../public/logo/instagram.svg";
 import Face from "../public/logo/facebook.svg";
-import Twitter from "../public/logo/twitter.svg";
 
 const Footer = () => {
   return (
@@ -26,9 +25,6 @@ const Footer = () => {
               <a href="https://facebook.com" rel="noopener" target="_blank">
                 <IconSocialMedia src={Face} />
               </a>
-              <a href="https://twitter.com" rel="noopener" target="_blank">
-                <IconSocialMedia src={Twitter} />
-              </a>
             </Container>
           </ContainerSocialMedia>
           <Container display="flex" flexDirection="column">
@@ -40,24 +36,7 @@ const Footer = () => {
                 <Input style={{ marginRight: ".5em" }} placeholder="Nome" />
                 <Input placeholder="Email" />
               </WrapInputs>
-              <CheckboxLabel style={{ margin: "1em 0" }}>Subject</CheckboxLabel>
-              <Container marginY={10} display="flex" alignItems="center">
-                <input type="checkbox" />
-                <CheckboxLabel>Sales</CheckboxLabel>
-              </Container>
-              <Container marginY={10} display="flex" alignItems="center">
-                <input type="checkbox" />
-                <CheckboxLabel>Logistics</CheckboxLabel>
-              </Container>
-              <Container marginY={10} display="flex" alignItems="center">
-                <input type="checkbox" />
-                <CheckboxLabel>Quality</CheckboxLabel>
-              </Container>
-              <Container marginTop={10} marginBottom={20} display="flex" alignItems="center">
-                <input type="checkbox" />
-                <CheckboxLabel>Marketing and Events</CheckboxLabel>
-              </Container>
-              <Textarea placeholder="message" />
+              <Textarea placeholder="Message" />
             </Container>
           </Container>
         </Grid>
@@ -166,15 +145,11 @@ const WrapInputs = styled(Container)`
   }
 `;
 
-const CheckboxLabel = styled(Text)`
-  padding-bottom: 0;
-  margin-left: 1em;
-`;
-
 const Textarea = styled.textarea`
   border-radius: 0.3em;
   border: none;
   text-indent: 10px;
+  margin-top:.7em;
   width: 100%;
   height: 145px;
 `;

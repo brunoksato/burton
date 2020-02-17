@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 html,body{
-  overflow-x:hidden !important;
+  overflow-x:hidden;
   scroll-behavior: smooth;
 }
 

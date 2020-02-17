@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import Menu from "../../public/logo/menu-white.svg";
 import StateManagerContext from "../../state/context/createContext";
+import MenuMobile from "../MenuMobile"
 
 const Navigation = props => {
   const { anchors } = useContext(StateManagerContext);
@@ -36,7 +37,8 @@ const Navigation = props => {
         <a onClick={handleScrollTo(anchors["events"])}>Eventos</a>
         {/* <a onClick={handleScrollTo(anchors["locale"])}>Onde estamos</a> */}
         <a onClick={handleScrollTo(anchors["footer"])}>contato</a>
-        <img src={Menu} />
+        <img src={Menu} onClick={props.showMenu} />
+        {/* <MenuMobile/> */}
       </NavLinks>
     </HeaderTop>
   );
@@ -52,6 +54,12 @@ const HeaderTop = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${props => props.theme.color.white};
+  @media(max-width:${props => props.theme.queries.md}){
+    position:fixed;
+    background:${props => props.theme.color.black};
+    z-index:9999;
+    height: 80px;
+  }
 `;
 
 const NavLinks = styled.div`

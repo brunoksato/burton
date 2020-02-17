@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Footer from "./Footer";
 import Anchor from "./Anchor";
 
-const Layout = ({ children }) => (
+const Layout = (props) => (
   <>
     <Container>
-      <main>{children}</main>
+      <main>{props.children}</main>
     </Container>
     <Anchor anchorId="footer">
       <Footer id="footer" />

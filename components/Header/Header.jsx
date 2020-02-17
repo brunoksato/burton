@@ -7,7 +7,7 @@ import Navigation from "./Navigation";
 const Header = props => {
   return (
     <Wrap>
-      <Navigation />
+      <Navigation showMenu={props.showMenu}/>
       <ContainerContent display="flex" flexDirection="column">
         <PrincipalText>
           Craft
@@ -41,12 +41,13 @@ const ContainerContent = styled(Container)`
   margin-top: 170px;
   transition: 0.5s;
   @media (max-width: ${props => props.theme.queries.md}) {
+    margin-top:8em;
     margin-left: 0%;
     transition: 0.5s;
     padding: 0 2em;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
-    margin-top: 50px;
+    margin-top:6em;
   }
 `;
 
