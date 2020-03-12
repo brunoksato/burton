@@ -11,6 +11,7 @@ export const theme = {
     background2:"black radial-gradient( #444 10%, #444 10%, #0B0D11 400px);",
   },
   queries: {
+    i5: "320px",
     sm: '480px',
     md: '768px',
     lg: '1024px',

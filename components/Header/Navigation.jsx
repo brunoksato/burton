@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import Menu from "../../public/logo/menu-white.svg";
 import StateManagerContext from "../../state/context/createContext";
-import MenuMobile from "../MenuMobile"
+import MenuMobile from "../MenuMobile";
 
 const Navigation = props => {
   const { anchors } = useContext(StateManagerContext);
@@ -54,20 +54,31 @@ const HeaderTop = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${props => props.theme.color.white};
-  @media(max-width:${props => props.theme.queries.md}){
-    position:fixed;
-    background:${props => props.theme.color.black};
-    z-index:9999;
-    height: 80px;
+  h1 {
+    cursor: pointer;
+    color: ${props => props.theme.color.black};
+  }
+  @media (max-width: ${props => props.theme.queries.md}) {
+    position: fixed;
+    background: ${props => props.theme.color.black};
+    border-bottom: 2px solid ${props => props.theme.color.black};
+    z-index: 9999;
+    height: 60px;
+    h1 {
+      color: ${props => props.theme.color.white};
+      font-size: 1.7rem;
+    }
   }
 `;
 
 const NavLinks = styled.div`
+  padding-left: 2em;
   display: flex;
   justify-content: space-between;
   a {
     text-transform: uppercase;
     cursor: pointer;
+    font-weight: 600;
     color: ${props => props.theme.color.white};
     text-decoration: none;
     font-size: 0.8rem;
@@ -100,7 +111,7 @@ const NavLinks = styled.div`
       display: none;
     }
     img {
-      width: 30px;
+      width: 25px;
       cursor: pointer;
       transition: 0.5s;
     }
