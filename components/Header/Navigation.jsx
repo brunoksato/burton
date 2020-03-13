@@ -56,7 +56,6 @@ const HeaderTop = styled.div`
   color: ${props => props.theme.color.white};
   h1 {
     cursor: pointer;
-    color: ${props => props.theme.color.black};
   }
   @media (max-width: ${props => props.theme.queries.md}) {
     position: fixed;

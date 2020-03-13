@@ -12,12 +12,13 @@ const Beers = () => {
   const [current, setCurrent] = useState(0);
 
   const arrBeers = [
-    <ContainerGradient beerName="Ipa" beerImg={"/images/beer.png"} />,
-    <ContainerGradient beerName="Blonde ale" beerImg={"/images/beer.png"} />,
-    <ContainerGradient beerName="Black ipa" beerImg={"/images/beer.png"} />,
-    <ContainerGradient beerName="Witbier" beerImg={"/images/beer.png"} />,
-    <ContainerGradient beerName="Session ipa" beerImg={"/images/beer.png"} />,
-    <ContainerGradient beerName="pilsen" beerImg={"/images/beer.png"} />
+    <ContainerGradient beerName="Ipa" beerImg={"/images/beers/ipa-no-bg.png"} />,
+    <ContainerGradient beerName="Blonde ale" beerImg={"/images/beers/blond-ale-no-bg.png"} />,
+    <ContainerGradient beerName="Black ipa" beerImg={"/images/beers/black-ipa-no-bg.png"} />,
+    <ContainerGradient beerName="Witbier" beerImg={"/images/beers/witbier-no-bg.png"} />,
+    <ContainerGradient beerName="Session ipa" beerImg={"/images/beers/session-ipa-no-bg.png"} />,
+    <ContainerGradient beerName="Pale Ale" beerImg={"/images/beers/pale-ale-no-bg.png"} />,
+    <ContainerGradient beerName="Pilsen" beerImg={"/images/beers/pilsen-no-bg.png"} />
   ];
 
   const frames = arrBeers.map((frame, i) => {
@@ -42,4 +43,7 @@ export default Beers;
 
 const CustomContainer = styled(Container)`
   height: 100vh;
+  @media(max-width:${props => props.theme.queries.sm}){
+    height: 110vh;
+  }
 `;

@@ -58,13 +58,14 @@ const Container = styled.div`
 const Title = styled.div`
   color: ${props => props.theme.color.white};
   z-index: 100;
+  margin-top: 1em;
   margin-bottom: 1em;
   h1 {
     font-size: 2.5rem;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
-    margin-bottom: 0.5em;
-
+    margin-bottom: .5em;
+    margin-top: .5em;
     h1 {
       font-size: 2rem;
     }
@@ -72,8 +73,10 @@ const Title = styled.div`
 `;
 
 const InfoBeer = styled.div`
-  width: 50%;
+  /* width: 50%; */
+  min-width:350px;
   @media (max-width: ${props => props.theme.queries.md}) {
+    min-width:100;
     width: 100%;
   }
 `;
@@ -95,11 +98,13 @@ const TextBottomBeer = styled.h2`
 
 const ImageBeer = styled.img`
   transition: 0.5s;
-  max-width: 60%;
+  margin-top:5em;
+  max-width:90%;
   @media (max-width: ${props => props.theme.queries.md}) {
-    max-width: 70%;
+    max-width: 120%;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
-    width: 85%;
+    max-width: 180%;
+    margin-top:0em;
   }
 `;

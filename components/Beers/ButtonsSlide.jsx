@@ -32,14 +32,14 @@ const Wrapper = styled.div`
   position: absolute;
   width: 100%;
   z-index: 100;
-  bottom: 30%;
+  top: 50%;
   text-align: center;
   right: 2em;
   @media (max-width: ${props => props.theme.queries.md}) {
     right: 0em;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
-    bottom: 38%;
+    top: 45%;
   }
 `;
 
@@ -57,7 +57,7 @@ const ChevronLeft = styled(ChevronRight)`
 `;
 
 const Button = styled.div`
-  width: 100px;
+  width: 70px;
   height: 100px;
   cursor: pointer;
   user-select: none;

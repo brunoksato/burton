@@ -17,7 +17,7 @@ const NewContainer = styled(Container)`
   @media (max-width: ${props => props.theme.queries.md}) {
     width: 0;
     h2 {
-      font-size: 0;
+      display:none;
     }
   }
 `;
