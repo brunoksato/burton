@@ -44,6 +44,9 @@ export default Beers;
 const CustomContainer = styled(Container)`
   height: 100vh;
   @media(max-width:${props => props.theme.queries.sm}){
-    height: 110vh;
+    height: 115vh;
+  }
+  @media(max-width:${props => props.theme.queries.i5}){
+    height: 130vh;
   }
 `;

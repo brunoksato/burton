@@ -25,7 +25,7 @@ const CustomContainer = styled(Container)`
   background: ${props => props.theme.color.black};
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 2em;
+  padding: 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@ const Title = styled.h1`
   color: ${props => props.theme.color.white};
   text-align: center;
   @media (max-width: ${props => props.theme.queries.sm}) {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 `;
 

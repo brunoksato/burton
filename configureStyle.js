@@ -24,17 +24,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 
-}
-body::-webkit-scrollbar {
-  width: .5em;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #ccc; 
-  outline: 1px solid slategrey;
+  ::-webkit-scrollbar {
+    width: .4em;
+    background-color: #333;
+  }
 
-}
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  ::-webkit-scrollbar-thumb {
+    background: ${props => props.theme.color.gold}; 
+    outline: 1px solid slategrey;
+    border-radius:10em;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius:10em;
+  }
 }
 
 article,

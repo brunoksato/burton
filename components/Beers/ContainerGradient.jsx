@@ -61,7 +61,7 @@ const Title = styled.div`
   margin-top: 1em;
   margin-bottom: 1em;
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
     margin-bottom: .5em;
@@ -78,6 +78,9 @@ const InfoBeer = styled.div`
   @media (max-width: ${props => props.theme.queries.md}) {
     min-width:100;
     width: 100%;
+  }
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    min-width:100%;
   }
 `;
 

@@ -5,6 +5,7 @@ export const theme = {
     lightGray:"#3F3E3F",
     yellow:"#F1A400",
     white:"#fff",
+    gold:"#faa72a"
   },
   gradient: {
     background:"radial-gradient( #333 13%, #333 10%, black)",

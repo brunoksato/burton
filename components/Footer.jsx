@@ -48,6 +48,9 @@ const Footer = () => {
 export default Footer;
 
 const NewContainer = styled(Container)`
+  display:flex;
+  justify-content:center;
+  min-height:100vh;
   background-color: ${props => props.theme.color.black};
   @media (max-width: ${props => props.theme.queries.md}) {
     .label {
@@ -75,6 +78,9 @@ const Title = styled.h1`
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 0.5em;
+  @media(max-width:${props => props.theme.queries.sm}){
+    font-size: 3rem;
+  }
 `;
 
 const WrapBorderBottom = styled(Container)`
