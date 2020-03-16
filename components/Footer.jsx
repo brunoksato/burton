@@ -11,33 +11,46 @@ const Footer = () => {
     <NewContainer display="flex" flexDirection="column">
       <Wrap>
         <WrapBorderBottom>
-          <Title>Let's be friends!</Title>
+          <Title>Vamos trocar uma ideia!</Title>
         </WrapBorderBottom>
         <Grid>
           <ContainerSocialMedia display="flex" flexDirection="column" width="100%">
             <WrapBorderBottom className="social-media">
-              <Text className="social-media">Connect with us on</Text>
+              <Text className="social-media">Se conecte com a gente</Text>
             </WrapBorderBottom>
-            <Container display="flex" className="wrap-icons">
-              <a href="https://instagram.com" rel="noopener" target="_blank">
-                <IconSocialMedia src={Insta} />
-              </a>
-              <a href="https://facebook.com" rel="noopener" target="_blank">
-                <IconSocialMedia src={Face} />
-              </a>
-            </Container>
+            <GridSociaMedia>
+              <Container display="flex" className="wrap-icons">
+                <a href="https://instagram.com/burtonsjc" rel="noopener" target="_blank">
+                  <IconSocialMedia src={Insta} />
+                </a>
+                <a href="https://facebook.com/burtonsjc" rel="noopener" target="_blank">
+                  <IconSocialMedia src={Face} />
+                </a>
+              </Container>
+              <Container 
+                display="flex" 
+                flexDirection="column" 
+                alignItems="flex-end"
+                justifyContent="flex-end"
+              >
+                <Phone>
+                  (12) 99999-9999
+                </Phone>
+              </Container>
+            </GridSociaMedia>
           </ContainerSocialMedia>
           <Container display="flex" flexDirection="column">
             <WrapBorderBottom className="">
-              <Text>Contact us</Text>
+              <Text>Entre em contato com a gente</Text>
             </WrapBorderBottom>
             <Container>
               <WrapInputs display="flex">
                 <Input style={{ marginRight: ".5em" }} placeholder="Nome" />
                 <Input placeholder="Email" />
               </WrapInputs>
-              <Textarea placeholder="Message" />
+              <Textarea placeholder="Mensagem" />
             </Container>
+            <BtnSend>Enviar</BtnSend>
           </Container>
         </Grid>
       </Wrap>
@@ -57,7 +70,7 @@ const NewContainer = styled(Container)`
       display: none;
     }
     .wrap-icons {
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 `;
@@ -116,7 +129,34 @@ const ContainerSocialMedia = styled(Container)`
       margin-left: -0.3em;
     }
   }
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    .social-media {
+      text-align: left;
+      margin-left: -.1em;
+    }
+  }
 `;
+
+const GridSociaMedia = styled(Container)`
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    grid-template-columns: 1fr;
+    justify-items:flex-start !important;
+    margin-bottom:5em;
+  }
+
+`
+
+const Phone = styled.div`
+  color:${props => props.theme.color.white};
+  font-size:1.2rem;
+  margin-top: 3em;
+  font-weight:500;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    margin-top: 2em;
+  }
+`
 
 const IconSocialMedia = styled.img`
   width: 30px;
@@ -143,11 +183,13 @@ const Input = styled.input`
 
 const WrapInputs = styled(Container)`
   padding-top: 3em;
+  margin-bottom:1em;
   @media (max-width: ${props => props.theme.queries.md}) {
     padding-top: 0em;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     flex-direction: column;
+    margin-bottom:.3em;
   }
 `;
 
@@ -155,7 +197,26 @@ const Textarea = styled.textarea`
   border-radius: 0.3em;
   border: none;
   text-indent: 10px;
-  margin-top:.7em;
   width: 100%;
   height: 145px;
+  padding:1em 0;
 `;
+
+const BtnSend = styled.button`
+  background:${props => props.theme.color.gold};
+  color:${props => props.theme.color.white};
+  outline:none;
+  border:none;
+  border-radius:.3em;
+  padding:.5em;
+  margin-top:.7em;
+  font-size:1rem;
+  cursor:pointer;
+  transition:.3s;
+  &:hover{
+    opacity:.9;
+  }
+  @media(max-width:${props => props.theme.queries.sm}){
+    margin-top:2em;
+  }
+`

@@ -27,8 +27,6 @@ const Events = props => {
     // }
   ]
 
-  console.log(eventsJson)
-
   return (
     <Anchor anchorId="events">
       <CustomContainer>
