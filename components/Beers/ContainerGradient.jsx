@@ -21,6 +21,7 @@ const ContainerGradient = props => {
           </TextBottomBeer>
         </InfoBeer>
         <ImageBeer
+          draggable="false"
           src={props.beerImg}
           loading="lazy"
           alt={`burton-cerveja-artesanal-${props.beerName}`}

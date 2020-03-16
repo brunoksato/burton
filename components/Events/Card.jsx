@@ -5,15 +5,12 @@ import { Container } from "../UI";
 const Card = props => {
   return (
     <Wrap>
-      <img src="https://midias.gazetaonline.com.br/_midias/jpg/2017/06/08/18948916_1314702505314744_301322469_o-5141114.jpg" />
+      <img draggable="false" src={props.item.image} />
       <Container paddingX={20} paddingTop={20}>
-        <TitleCard>Feira de cervejas artesanais em São José dos Campos</TitleCard>
-        <CardDate>20 de Março,2019</CardDate>
+        <TitleCard>{props.item.title}</TitleCard>
+        <CardDate>{props.item.date}</CardDate>
         <CardText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Malesuada nunc vel risus commodo viverra maecenas.
-          Viverra suspendisse potenti nullam ac tortor. Odio ut enim blandit volutpat maecenas
-          volutpat blandit. Diam vulputate ut pharetra sit amet aliquam id diam maecenas.
+         {props.item.description}
         </CardText>
       </Container>
     </Wrap>

@@ -36,6 +36,7 @@ const Navigation = props => {
         <a onClick={handleScrollTo(anchors["beers"])}>Cervejas</a>
         <a onClick={handleScrollTo(anchors["events"])}>Eventos</a>
         {/* <a onClick={handleScrollTo(anchors["locale"])}>Onde estamos</a> */}
+        {/* <a onClick={handleScrollTo(anchors["about"])}>Sobre</a> */}
         <a onClick={handleScrollTo(anchors["footer"])}>contato</a>
         <img src={Menu} onClick={props.showMenu} />
         {/* <MenuMobile/> */}

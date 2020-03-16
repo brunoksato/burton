@@ -18,7 +18,7 @@ const Header = props => {
           ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit amet porttitor.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </SecondaryText>
-        <OutlineBtn onClick={props.handleButton}>About Company</OutlineBtn>
+        {/* <OutlineBtn onClick={props.handleButton}>About Company</OutlineBtn> */}
       </ContainerContent>
     </Wrap>
   );
