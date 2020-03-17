@@ -48,7 +48,7 @@ const Footer = () => {
                   <IconSocialMedia src={Face} />
                 </a>
               </Container>
-              <Container
+              <WrapEmailAndPhone
                 display="flex"
                 flexDirection="column"
                 alignItems="flex-end"
@@ -56,7 +56,7 @@ const Footer = () => {
               >
                 <Phone>(12) 99704-7406</Phone>
                 <Email>geison@burton.com.br</Email>
-              </Container>
+              </WrapEmailAndPhone>
             </GridSociaMedia>
           </ContainerSocialMedia>
           <Container display="flex" flexDirection="column">
@@ -251,5 +251,12 @@ const BtnSend = styled.button`
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     margin-top: 2em;
+  }
+`;
+
+const WrapEmailAndPhone = styled(Container)`
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
   }
 `;
