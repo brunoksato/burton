@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+
 function SEO({ description, lang, meta, keywords, title, image, url }) {
   const metaTitle = title;
   const metaDescription = description;

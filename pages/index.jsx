@@ -8,6 +8,8 @@ import Header from "../components/Header/Header";
 import Beers from "../components/Sections/Beers";
 import Events from "../components/Sections/Events";
 
+import Dog from "../public/icons/burton-dog.png"
+
 const HomePage = () => {
   const [panelOpen, setPanelOpen] = useState(false);
   const panelProps = useSpring({
@@ -28,7 +30,7 @@ const HomePage = () => {
           setPanelOpen={setPanelOpen}
         />
       </animated.div>
-      <SEO title="Burton" />
+      <SEO title="Burton Cervejas Artesanais" />
       <Header showMenu={() => setPanelOpen(a => !a)} />
       <Beers id="beers" />
       <Events id="events" />

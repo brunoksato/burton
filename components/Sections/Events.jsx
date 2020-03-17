@@ -53,7 +53,7 @@ const Events = props => {
                     />
                   ))
                 }
-                <Container display="flex" marginTop={100} marginBottom={100} alignItems="center">
+                <Container paddingX={20} display="flex" marginTop={100} marginBottom={100} alignItems="center">
                   <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
                 </Container>
               </Grid>
@@ -67,12 +67,12 @@ const Events = props => {
                     />
                   ))
                 }
-                <Container marginTop={100} marginBottom={100} display="flex" alignItems="center">
+                <Container marginTop={100} paddingX={20} marginBottom={100} display="flex" alignItems="center">
                   <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
                 </Container>
               </Grid>
             ) : eventsJson && eventsJson.length === 0 && (
-                <NoEvents marginTop={100} marginBottom={100} display="flex" alignItems="center">
+                <NoEvents marginTop={100}  paddingX={20} marginBottom={100} display="flex" alignItems="center">
                   <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
                 </NoEvents>
             )

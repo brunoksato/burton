@@ -25,8 +25,7 @@ const Navigation = props => {
   return (
     <HeaderTop>
       <Link href="/">
-        <h1>Burton</h1>
-        {/* <img className="logotype" loading="lazy" src={Logo} alt="logo" /> */}
+        <Logo src="images/burton-logo-white.svg" />
       </Link>
       <NavLinks>
         {/* <a onClick={() => window.scrollTo({
@@ -59,6 +58,7 @@ const HeaderTop = styled.div`
     cursor: pointer;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
+    padding: 0em 1em;
     position: fixed;
     background: ${props => props.theme.color.black};
     border-bottom: 2px solid ${props => props.theme.color.black};
@@ -117,3 +117,12 @@ const NavLinks = styled.div`
     }
   }
 `;
+
+
+const Logo = styled.img`
+  max-width:180px;
+  cursor: pointer;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    max-width:100px;  
+  }
+`

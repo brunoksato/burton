@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Anchor from "./Anchor";
+import Head from 'next/head';
 
 const Layout = (props) => (
   <>
+    <Head>
+      <link rel="shortcut icon" href="icons/burton-dog.png" />
+    </Head>
     <Container>
       <main>{props.children}</main>
     </Container>
