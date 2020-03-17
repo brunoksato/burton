@@ -55,6 +55,7 @@ const Footer = () => {
                 justifyContent="flex-end"
               >
                 <Phone>(12) 99704-7406</Phone>
+                <Email>geison@burton.com.br</Email>
               </Container>
             </GridSociaMedia>
           </ContainerSocialMedia>
@@ -174,6 +175,16 @@ const Phone = styled.div`
   color: ${props => props.theme.color.white};
   font-size: 1.2rem;
   margin-top: 3em;
+  font-weight: 500;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    margin-top: 2em;
+  }
+`;
+
+const Email = styled.div`
+  color: ${props => props.theme.color.white};
+  font-size: 1.2rem;
+  margin-top: 1em;
   font-weight: 500;
   @media (max-width: ${props => props.theme.queries.md}) {
     margin-top: 2em;
