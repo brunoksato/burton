@@ -13,11 +13,11 @@ const ContainerGradient = props => {
             <Title>
               <h1>{props.beerName}</h1>
             </Title>
-            <BoxAboutBeer />
+            <BoxAboutBeer description={props.description} />
           </div>
-          <BoxInfoBeer />
+          <BoxInfoBeer alcohol={props.alcohol} ibu={props.ibu} ingredient={props.ingredient} />
           <TextBottomBeer>
-            Made with the finest <br /> <b>two-row barley</b>
+            Feito com os melhores <b>Maltes</b> e <b>Lúpulos</b>
           </TextBottomBeer>
         </InfoBeer>
         <ImageBeer
@@ -65,8 +65,8 @@ const Title = styled.div`
     font-size: 3rem;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
-    margin-bottom: .5em;
-    margin-top: .5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     h1 {
       font-size: 2rem;
     }
@@ -75,13 +75,13 @@ const Title = styled.div`
 
 const InfoBeer = styled.div`
   /* width: 50%; */
-  min-width:350px;
+  min-width: 350px;
   @media (max-width: ${props => props.theme.queries.md}) {
-    min-width:100;
+    min-width: 100;
     width: 100%;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
-    min-width:100%;
+    min-width: 100%;
   }
 `;
 
@@ -102,13 +102,13 @@ const TextBottomBeer = styled.h2`
 
 const ImageBeer = styled.img`
   transition: 0.5s;
-  margin-top:5em;
-  max-width:90%;
+  margin-top: 5em;
+  max-width: 90%;
   @media (max-width: ${props => props.theme.queries.md}) {
     max-width: 120%;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     max-width: 180%;
-    margin-top:0em;
+    margin-top: 0em;
   }
 `;

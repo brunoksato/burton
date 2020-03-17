@@ -5,7 +5,7 @@ import { Container } from "../UI";
 const BoxAboutBeer = props => {
   return (
     <NewContainer width={280} display="flex" flexDirection="column" alignItems="center">
-      <TextInfoBeer>Cerveja de cor dourada, com notas cítricas e lúpulos americanos.</TextInfoBeer>
+      <TextInfoBeer>{props.description}</TextInfoBeer>
     </NewContainer>
   );
 };
@@ -17,7 +17,7 @@ const NewContainer = styled(Container)`
   @media (max-width: ${props => props.theme.queries.md}) {
     width: 0;
     h2 {
-      display:none;
+      display: none;
     }
   }
 `;

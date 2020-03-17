@@ -10,13 +10,11 @@ const Header = props => {
       <Navigation showMenu={props.showMenu} />
       <ContainerContent display="flex" flexDirection="column">
         <PrincipalText>
-          Craft
-          <br /> Brewery
+          Cervejas
+          <br /> Artesanais
         </PrincipalText>
         <SecondaryText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Enim nunc faucibus a pellentesque sit amet porttitor.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          Cervejas 100% artesanais produzidas em São José dos Campos - SP
         </SecondaryText>
         {/* <OutlineBtn onClick={props.handleButton}>About Company</OutlineBtn> */}
       </ContainerContent>

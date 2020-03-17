@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { Container } from "./UI";
@@ -7,6 +7,27 @@ import Insta from "../public/logo/instagram.svg";
 import Face from "../public/logo/facebook.svg";
 
 const Footer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const saveMessage = () => {
+    const url = "https://v2-api.sheety.co/b8157d1ac6a9d1d94be11b0ac7323575/burtonComBr/emails";
+    const username = "burton";
+    const password = "burton@10";
+    let headers = new Headers();
+    headers.set("Authorization", "Basic " + btoa(username + ":" + password));
+    headers.set("Content-Type", "application/x-www-form-urlencoded");
+
+    fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: new URLSearchParams(`email[name]=${name}&email[email]=${email}&email[message]=${msg}`)
+    })
+      .then(response => response.json())
+      .then(json => console.log(json));
+  };
+
   return (
     <NewContainer display="flex" flexDirection="column">
       <Wrap>
@@ -27,15 +48,13 @@ const Footer = () => {
                   <IconSocialMedia src={Face} />
                 </a>
               </Container>
-              <Container 
-                display="flex" 
-                flexDirection="column" 
+              <Container
+                display="flex"
+                flexDirection="column"
                 alignItems="flex-end"
                 justifyContent="flex-end"
               >
-                <Phone>
-                  (12) 99999-9999
-                </Phone>
+                <Phone>(12) 99704-7406</Phone>
               </Container>
             </GridSociaMedia>
           </ContainerSocialMedia>
@@ -45,12 +64,16 @@ const Footer = () => {
             </WrapBorderBottom>
             <Container>
               <WrapInputs display="flex">
-                <Input style={{ marginRight: ".5em" }} placeholder="Nome" />
-                <Input placeholder="Email" />
+                <Input
+                  style={{ marginRight: ".5em" }}
+                  placeholder="Nome"
+                  onChange={e => setName(e.target.value)}
+                />
+                <Input placeholder="Email" onChange={e => setEmail(e.target.value)} />
               </WrapInputs>
-              <Textarea placeholder="Mensagem" />
+              <Textarea placeholder="Mensagem" onChange={e => setMsg(e.target.value)} />
             </Container>
-            <BtnSend>Enviar</BtnSend>
+            <BtnSend onClick={saveMessage}>Enviar</BtnSend>
           </Container>
         </Grid>
       </Wrap>
@@ -61,9 +84,9 @@ const Footer = () => {
 export default Footer;
 
 const NewContainer = styled(Container)`
-  display:flex;
-  justify-content:center;
-  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
   background-color: ${props => props.theme.color.black};
   @media (max-width: ${props => props.theme.queries.md}) {
     .label {
@@ -91,7 +114,7 @@ const Title = styled.h1`
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 0.5em;
-  @media(max-width:${props => props.theme.queries.sm}){
+  @media (max-width: ${props => props.theme.queries.sm}) {
     font-size: 3rem;
   }
 `;
@@ -132,31 +155,30 @@ const ContainerSocialMedia = styled(Container)`
   @media (max-width: ${props => props.theme.queries.sm}) {
     .social-media {
       text-align: left;
-      margin-left: -.1em;
+      margin-left: -0.1em;
     }
   }
 `;
 
 const GridSociaMedia = styled(Container)`
-  display:grid;
-  grid-template-columns:1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   @media (max-width: ${props => props.theme.queries.sm}) {
     grid-template-columns: 1fr;
-    justify-items:flex-start !important;
-    margin-bottom:5em;
+    justify-items: flex-start !important;
+    margin-bottom: 5em;
   }
-
-`
+`;
 
 const Phone = styled.div`
-  color:${props => props.theme.color.white};
-  font-size:1.2rem;
+  color: ${props => props.theme.color.white};
+  font-size: 1.2rem;
   margin-top: 3em;
-  font-weight:500;
+  font-weight: 500;
   @media (max-width: ${props => props.theme.queries.md}) {
     margin-top: 2em;
   }
-`
+`;
 
 const IconSocialMedia = styled.img`
   width: 30px;
@@ -183,13 +205,13 @@ const Input = styled.input`
 
 const WrapInputs = styled(Container)`
   padding-top: 3em;
-  margin-bottom:1em;
+  margin-bottom: 1em;
   @media (max-width: ${props => props.theme.queries.md}) {
     padding-top: 0em;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     flex-direction: column;
-    margin-bottom:.3em;
+    margin-bottom: 0.3em;
   }
 `;
 
@@ -199,24 +221,24 @@ const Textarea = styled.textarea`
   text-indent: 10px;
   width: 100%;
   height: 145px;
-  padding:1em 0;
+  padding: 1em 0;
 `;
 
 const BtnSend = styled.button`
-  background:${props => props.theme.color.gold};
-  color:${props => props.theme.color.white};
-  outline:none;
-  border:none;
-  border-radius:.3em;
-  padding:.5em;
-  margin-top:.7em;
-  font-size:1rem;
-  cursor:pointer;
-  transition:.3s;
-  &:hover{
-    opacity:.9;
+  background: ${props => props.theme.color.gold};
+  color: ${props => props.theme.color.white};
+  outline: none;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  margin-top: 0.7em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.9;
   }
-  @media(max-width:${props => props.theme.queries.sm}){
-    margin-top:2em;
+  @media (max-width: ${props => props.theme.queries.sm}) {
+    margin-top: 2em;
   }
-`
+`;

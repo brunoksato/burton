@@ -14,7 +14,7 @@ const BoxInfoBeer = props => {
             marginBottom={20}
           >
             <TextLabelBeer>Álcool</TextLabelBeer>
-            <TextInfoBeer>4.5%</TextInfoBeer>
+            <TextInfoBeer>{props.alcohol}</TextInfoBeer>
           </Container>
           <Container
             display="flex"
@@ -23,12 +23,12 @@ const BoxInfoBeer = props => {
             marginBottom={20}
           >
             <TextLabelBeer>IBU</TextLabelBeer>
-            <TextInfoBeer>média</TextInfoBeer>
+            <TextInfoBeer>{props.ibu}</TextInfoBeer>
           </Container>
         </NewContainer>
         <Container display="flex" flexDirection="column" alignItems="flex-start">
           <TextLabelBeer>ingredientes</TextLabelBeer>
-          <TextInfoBeer>Barley Malt, Rice, wheat malt, hops and yeast</TextInfoBeer>
+          <TextInfoBeer>{props.ingredient}</TextInfoBeer>
         </Container>
       </ContainerInfoBeer>
       <Btn>Button</Btn>
