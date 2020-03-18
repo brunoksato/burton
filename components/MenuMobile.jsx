@@ -50,11 +50,17 @@ const MenuMobile = props => {
             props.setPanelOpen(false);
           }}
         >
-          Início
+          <h1>Início</h1>
         </ItemMenu>
-        <ItemMenu onClick={handleScrollTo(anchors["beers"])}>cervejas</ItemMenu>
-        <ItemMenu onClick={handleScrollTo(anchors["events"])}>eventos</ItemMenu>
-        <ItemMenu onClick={handleScrollTo(anchors["footer"])}>contato</ItemMenu>
+        <ItemMenu onClick={handleScrollTo(anchors["beers"])} href="#beers">
+          <h1>cervejas</h1>
+        </ItemMenu>
+        <ItemMenu onClick={handleScrollTo(anchors["events"])} href="#events">
+          <h1>eventos</h1>
+        </ItemMenu>
+        <ItemMenu onClick={handleScrollTo(anchors["footer"])} href="#footer">
+          <h1>contato</h1>
+        </ItemMenu>
       </Container>
     </MyContainer>
   );
@@ -77,10 +83,13 @@ const IconClose = styled.img`
   cursor: pointer;
 `;
 
-const ItemMenu = styled.h1`
-  cursor: pointer;
-  color: ${props => props.theme.color.white};
-  letter-spacing: 2px;
-  margin: 0.3em 0;
-  font-size: 2.7rem;
+const ItemMenu = styled.a`
+  text-decoration: none;
+  h1 {
+    color: ${props => props.theme.color.white};
+    letter-spacing: 2px;
+    margin: 0.3em 0;
+    font-size: 2.7rem;
+    cursor: pointer;
+  }
 `;

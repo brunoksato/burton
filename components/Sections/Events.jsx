@@ -5,7 +5,6 @@ import Card from "../Events/Card";
 import Anchor from "../Anchor";
 
 const Events = props => {
-
   const eventsJson = [
     // {
     //   image: "https://midias.gazetaonline.com.br/_midias/jpg/2017/06/08/18948916_1314702505314744_301322469_o-5141114.jpg",
@@ -25,58 +24,62 @@ const Events = props => {
     //   date: "20 de Março, 2019",
     //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada nunc vel risus commodo viverra maecenas. Viverra suspendisse potenti nullam ac tortor. Odio ut enim blandit volutpat maecenas volutpat blandit. Diam vulputate ut pharetra sit amet aliquam id diam maecenas."
     // }
-  ]
+  ];
 
   return (
-    <Anchor anchorId="events">
+    <Anchor anchorId="events" id="events">
       <CustomContainer>
         <Title>Eventos</Title>
-          {
-            eventsJson && eventsJson.length === 3 ? (
-              <Grid>
-                {
-                  eventsJson.map((item,idx) => (
-                      <Card 
-                        key={idx}
-                        item={item}
-                      />
-                  ))
-                }
-              </Grid>
-            ) : eventsJson && eventsJson.length === 2 ? (
-              <Grid>
-                {
-                  eventsJson.map((item,idx) => (
-                  <Card 
-                    key={idx}
-                    item={item}
-                    />
-                  ))
-                }
-                <Container paddingX={20} display="flex" marginTop={100} marginBottom={100} alignItems="center">
-                  <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
-                </Container>
-              </Grid>
-            ) : eventsJson && eventsJson.length === 1 ? (
-              <Grid>
-                {
-                  eventsJson.map((item,idx) => (
-                  <Card 
-                    key={idx}
-                    item={item}
-                    />
-                  ))
-                }
-                <Container marginTop={100} paddingX={20} marginBottom={100} display="flex" alignItems="center">
-                  <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
-                </Container>
-              </Grid>
-            ) : eventsJson && eventsJson.length === 0 && (
-                <NoEvents marginTop={100}  paddingX={20} marginBottom={100} display="flex" alignItems="center">
-                  <h1 style={{color:"#fff",textAlign:"center"}}>mais eventos em breve.</h1>
-                </NoEvents>
-            )
-          }
+        {eventsJson && eventsJson.length === 3 ? (
+          <Grid>
+            {eventsJson.map((item, idx) => (
+              <Card key={idx} item={item} />
+            ))}
+          </Grid>
+        ) : eventsJson && eventsJson.length === 2 ? (
+          <Grid>
+            {eventsJson.map((item, idx) => (
+              <Card key={idx} item={item} />
+            ))}
+            <Container
+              paddingX={20}
+              display="flex"
+              marginTop={100}
+              marginBottom={100}
+              alignItems="center"
+            >
+              <h1 style={{ color: "#fff", textAlign: "center" }}>mais eventos em breve.</h1>
+            </Container>
+          </Grid>
+        ) : eventsJson && eventsJson.length === 1 ? (
+          <Grid>
+            {eventsJson.map((item, idx) => (
+              <Card key={idx} item={item} />
+            ))}
+            <Container
+              marginTop={100}
+              paddingX={20}
+              marginBottom={100}
+              display="flex"
+              alignItems="center"
+            >
+              <h1 style={{ color: "#fff", textAlign: "center" }}>mais eventos em breve.</h1>
+            </Container>
+          </Grid>
+        ) : (
+          eventsJson &&
+          eventsJson.length === 0 && (
+            <NoEvents
+              marginTop={100}
+              paddingX={20}
+              marginBottom={100}
+              display="flex"
+              alignItems="center"
+            >
+              <h1 style={{ color: "#fff", textAlign: "center" }}>mais eventos em breve.</h1>
+            </NoEvents>
+          )
+        )}
       </CustomContainer>
     </Anchor>
   );
@@ -125,8 +128,8 @@ const Grid = styled.div`
 `;
 
 const NoEvents = styled(Container)`
-  height:500px;
-  @media(max-width:${props => props.theme.queries.md}){
-    height:200px;
+  height: 500px;
+  @media (max-width: ${props => props.theme.queries.md}) {
+    height: 200px;
   }
-`
+`;

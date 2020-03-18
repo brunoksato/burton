@@ -32,11 +32,17 @@ const Navigation = props => {
           top:0,
           behavior:"smooth"
         })}>Início</a> */}
-        <a onClick={handleScrollTo(anchors["beers"])}>Cervejas</a>
-        <a onClick={handleScrollTo(anchors["events"])}>Eventos</a>
+        <a onClick={handleScrollTo(anchors["beers"])} href="#beers">
+          Cervejas
+        </a>
+        <a onClick={handleScrollTo(anchors["events"])} href="#events">
+          Eventos
+        </a>
         {/* <a onClick={handleScrollTo(anchors["locale"])}>Onde estamos</a> */}
         {/* <a onClick={handleScrollTo(anchors["about"])}>Sobre</a> */}
-        <a onClick={handleScrollTo(anchors["footer"])}>contato</a>
+        <a onClick={handleScrollTo(anchors["footer"])} href="#footer">
+          contato
+        </a>
         <img src={Menu} onClick={props.showMenu} />
         {/* <MenuMobile/> */}
       </NavLinks>
@@ -118,11 +124,10 @@ const NavLinks = styled.div`
   }
 `;
 
-
 const Logo = styled.img`
-  max-width:180px;
+  max-width: 180px;
   cursor: pointer;
   @media (max-width: ${props => props.theme.queries.md}) {
-    max-width:100px;  
+    max-width: 100px;
   }
-`
+`;

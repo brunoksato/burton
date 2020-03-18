@@ -75,7 +75,7 @@ const Beers = () => {
   });
 
   return (
-    <Anchor anchorId="beers">
+    <Anchor anchorId="beers" id="beers">
       <CustomContainer id="beer-section">
         <Carousel
           currentFrameIndex={current}

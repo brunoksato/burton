@@ -12,7 +12,7 @@ const Layout = props => (
     <Container>
       <main>{props.children}</main>
     </Container>
-    <Anchor anchorId="footer">
+    <Anchor anchorId="footer" id="footer">
       <Footer id="footer" />
     </Anchor>
   </>
