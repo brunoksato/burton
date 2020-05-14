@@ -30,7 +30,7 @@ const Beers = () => {
     />,
     <ContainerGradient
       beerName="Blonde ale"
-      description="CERVEJA DE COR DOURADA, COM NOTAS CÍTRICAS E LÚPULOS AMERICANOS."
+      description="Alto drinkability, refrescante e equilibrada, esse estilo americano orientado para o malte, com espuma branca e persistente, aroma adocicado de malte e com lúpulos frutados, de cor dourada. Espuma branca de persistência media. De amargor baixo."
       beerImg={"/images/beers/blond-ale-no-bg.png"}
       alcohol={"4.7%"}
       ibu={"16"}
@@ -38,7 +38,7 @@ const Beers = () => {
     />,
     <ContainerGradient
       beerName="Pale Ale"
-      description="CERVEJA DE COLORAÇÃO AMARELA E ASPECTO TURVO, LEVEMENTE FRUTADA."
+      description="Cerveja puro malte leve de cor dourado claro, espuma branca com aroma frutado provindos dos lúpulos alemães."
       beerImg={"/images/beers/pale-ale-no-bg.png"}
       alcohol={"5.0%"}
       ibu={"10"}
@@ -46,7 +46,7 @@ const Beers = () => {
     />,
     <ContainerGradient
       beerName="Witbier"
-      description="CERVEJA DE COLORAÇÃO AMARELA E ASPECTO TURVO, COM NOTAS CÍTRICAS E CONDIMENTADAS."
+      description="Uma cerveja a base de trigo, refrescante, elegante, condimentada com grãos de coentro e vivaz cítrico de laranja. De baixo amargor e cor amarelo palha."
       beerImg={"/images/beers/witbier-no-bg.png"}
       alcohol={"4.7%"}
       ibu={"11"}
@@ -54,7 +54,7 @@ const Beers = () => {
     />,
     <ContainerGradient
       beerName="Session ipa"
-      description="CERVEJA DE COLORAÇÃO AMARELA, COM NOTAS CÍTRICAS E LÚPULOS AUSTRALIANO."
+      description="Cerveja refrescante,  com baixo teor alcoólico e amargor, sem perder as características lupuladas de uma IPA."
       beerImg={"/images/beers/session-ipa-no-bg.png"}
       alcohol={"4.8%"}
       ibu={"35"}
@@ -62,7 +62,7 @@ const Beers = () => {
     />,
     <ContainerGradient
       beerName="Black ipa"
-      description="CERVEJA ESCURA, ROBUSTA, LUPULADA COM UM AMARGOR QUE PERSISTE."
+      description="Característica escura com seu malte torrado, notas que remetem ao caramelo ou frutas cítricas podem aparecer na cerveja. Uma cerveja seca de amargor médio, com coloração preto. Espuma de cor bege, com média formação e retenção."
       beerImg={"/images/beers/black-ipa-no-bg.png"}
       alcohol={"6.8%"}
       ibu={"45"}

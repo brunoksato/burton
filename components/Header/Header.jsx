@@ -28,47 +28,46 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${props => props.theme.color.black};
-  background-image: url("images/beer-no-bg.png");
-  background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
   overflow: hidden;
-  @media (max-width: ${props => props.theme.queries.xl}) {
-    background-size: cover;
-  }
-  @media (max-width: ${props => props.theme.queries.lg}) {
-    background-size: 110% 95%;
-  }
-  @media (max-width: ${props => props.theme.queries.sm}) {
-    background-size: 120% 125%;
-  }
-  @media (max-width: ${props => props.theme.queries.i5}) {
-    min-height: 700px;
-    background-size: 120% 110%;
-  }
+  background-image: url("images/beer-no-bg.png");
+  background-position-y: 10%;
+  background-position-x: 83%;
+  background-size: cover;
 `;
 
 //START center content
 const ContainerContent = styled(Container)`
   padding: 0 1em;
   margin-left: 15%;
-  margin-top: 50px;
+  margin-top: 5%;
   transition: 0.5s;
-  @media (max-width: 1440px) {
-    margin-top: -20px;
-  }
   @media (max-width: ${props => props.theme.queries.lg}) {
-    margin-top: 8em;
+    margin-top: 40%;
     margin-left: 5%;
   }
   @media (max-width: ${props => props.theme.queries.md}) {
-    margin-top: 6em;
+    margin-top: 50%;
+    margin-left: 3%;
     transition: 0.5s;
     padding: 0 1em;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     margin-left: 2%;
-    margin-top: 6em;
+    margin-top: 330px;
+  }
+  @media (max-width: 375px) and (max-height: 812px) {
+    margin-top: 400px;
+  }
+  @media (max-width: 375px) and (max-height: 667px) {
+    margin-top: 300px;
+  }
+  @media (max-width: 360px) and (max-height: 640px) {
+    margin-top: 280px;
+  }
+  @media (max-width: ${props => props.theme.queries.i5}) {
+    margin-top: 200px;
   }
 `;
 
@@ -93,7 +92,7 @@ const SecondaryText = styled.p`
   opacity: 0.8;
   color: ${props => props.theme.color.white};
   @media (max-width: ${props => props.theme.queries.md}) {
-    max-width: 500px;
+    max-width: 490px;
   }
   @media (max-width: ${props => props.theme.queries.sm}) {
     color: ${props => props.theme.color.white};

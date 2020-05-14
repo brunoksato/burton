@@ -31,7 +31,7 @@ const BoxInfoBeer = props => {
           <TextInfoBeer>{props.ingredient}</TextInfoBeer>
         </Container>
       </ContainerInfoBeer>
-      <Btn>Button</Btn>
+      {/* <Btn>Button</Btn> */}
     </WrapperInfoBeer>
   );
 };
