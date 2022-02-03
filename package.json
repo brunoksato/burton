@@ -4,6 +4,11 @@
   "description": "Burton Website",
   "version": "1.0.0",
   "author": "Bruno Sato",
+  "engines": {
+    "node": ">=12.x",
+    "npm": "You must use yarn in this project!",
+    "yarn": "^1.22.x"
+  },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.19.0",
