@@ -39,7 +39,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && next export",
     "precommit": "yarn lint-staged"
   },
   "lint-staged": {
