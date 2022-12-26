@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+
+/ https://www.instagram.com/burtoncervejaria/
+/delivery https://www.goomer.app/burton-cervejas-artesanais-1

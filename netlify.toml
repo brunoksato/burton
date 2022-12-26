@@ -1,2 +1,14 @@
 [build.environment]
   YARN_VERSION = "1.22.4"
+
+[[redirects]]
+  from = "/"
+  to = "https://www.instagram.com/burtoncervejaria/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/delivery"
+  to = "https://www.goomer.app/burton-cervejas-artesanais-1"
+  status = 301
+  force = false
