@@ -41,10 +41,10 @@ const Footer = () => {
             </WrapBorderBottom>
             <GridSociaMedia>
               <Container display="flex" className="wrap-icons">
-                <a href="https://instagram.com/burtonsjc" rel="noopener" target="_blank">
+                <a href="https://instagram.com/burtoncervejaria" rel="noopener" target="_blank">
                   <IconSocialMedia src={Insta} />
                 </a>
-                <a href="https://facebook.com/burtonsjc" rel="noopener" target="_blank">
+                <a href="https://facebook.com/burtoncervejaria" rel="noopener" target="_blank">
                   <IconSocialMedia src={Face} />
                 </a>
               </Container>
